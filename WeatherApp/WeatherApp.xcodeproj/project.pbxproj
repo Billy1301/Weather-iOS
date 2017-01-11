@@ -14,6 +14,9 @@
 		287ADE7F1E259D0900A2ABCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287ADE7D1E259D0900A2ABCC /* LaunchScreen.storyboard */; };
 		287ADE8A1E25A78900A2ABCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ADE891E25A78900A2ABCC /* Constants.swift */; };
 		287ADE8C1E25A9C600A2ABCC /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ADE8B1E25A9C600A2ABCC /* CurrentWeather.swift */; };
+		287ADE8E1E25F2A100A2ABCC /* Forcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ADE8D1E25F2A100A2ABCC /* Forcast.swift */; };
+		287ADE901E25FD4B00A2ABCC /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ADE8F1E25FD4B00A2ABCC /* WeatherCell.swift */; };
+		287ADE921E26059D00A2ABCC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ADE911E26059D00A2ABCC /* Location.swift */; };
 		E7CECE03C86646863B1FD458 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE26547390A9A63DA73DD248 /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		287ADE801E259D0900A2ABCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287ADE891E25A78900A2ABCC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		287ADE8B1E25A9C600A2ABCC /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		287ADE8D1E25F2A100A2ABCC /* Forcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forcast.swift; sourceTree = "<group>"; };
+		287ADE8F1E25FD4B00A2ABCC /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		287ADE911E26059D00A2ABCC /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		53C6587990D234615DC75067 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		DE1A296A9EF027B21955EE31 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE26547390A9A63DA73DD248 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,7 @@
 		287ADE871E259E0500A2ABCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				287ADE8F1E25FD4B00A2ABCC /* WeatherCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -95,8 +102,10 @@
 		287ADE881E259E0B00A2ABCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				287ADE8D1E25F2A100A2ABCC /* Forcast.swift */,
 				287ADE891E25A78900A2ABCC /* Constants.swift */,
 				287ADE8B1E25A9C600A2ABCC /* CurrentWeather.swift */,
+				287ADE911E26059D00A2ABCC /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -243,9 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				287ADE771E259D0900A2ABCC /* WeatherVC.swift in Sources */,
+				287ADE8E1E25F2A100A2ABCC /* Forcast.swift in Sources */,
+				287ADE901E25FD4B00A2ABCC /* WeatherCell.swift in Sources */,
 				287ADE751E259D0900A2ABCC /* AppDelegate.swift in Sources */,
 				287ADE8C1E25A9C600A2ABCC /* CurrentWeather.swift in Sources */,
 				287ADE8A1E25A78900A2ABCC /* Constants.swift in Sources */,
+				287ADE921E26059D00A2ABCC /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
