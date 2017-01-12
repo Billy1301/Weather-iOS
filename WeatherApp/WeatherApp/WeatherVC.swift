@@ -14,12 +14,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var curentTempLabel: UILabel!
-
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var weatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    // location
     let locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     
@@ -31,16 +31,14 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // request location authorization from user
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.stopMonitoringSignificantLocationChanges()
         
-        
         tableView.dataSource = self
         tableView.delegate = self
-    
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +46,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         locationAuthStatus()
     }
     
+    // get user location
     func locationAuthStatus(){
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             currentLocation = locationManager.location!
@@ -58,16 +57,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 self.downloadForecaseData {
                     self.updateMainUI()
                 }
-                
             }
-            
-            
         } else {
             locationManager.requestWhenInUseAuthorization()
             locationAuthStatus()
         }
     }
     
+    
+    // get data from API
     func downloadForecaseData(completed: @escaping DownloadComplete) {
         //Download forecast
         let forecaseURL = URL(string: FORECAST_URL)!
@@ -89,9 +87,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             }
             completed()
         }
-
     }
     
+    // setup tableview 
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -111,7 +109,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         } else {
             return WeatherCell()
         }
-    
     }
     
     //setup the data to the UI

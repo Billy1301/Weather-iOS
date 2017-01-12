@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+//forecast model 
 class Forecast {
     
     var _date: String!
